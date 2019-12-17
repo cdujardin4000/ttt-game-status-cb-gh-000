@@ -47,7 +47,7 @@ end
 def winner?(board)
   if won?(board) == falsey
     return nil
-  else 
+  else
     return combo
   end
 end
