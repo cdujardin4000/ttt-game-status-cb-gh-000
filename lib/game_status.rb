@@ -15,12 +15,10 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def game_won?(board) WIN_COMBINATIONS.each do |wincombo|
-
-  if (board[wincombo[0]]) == "X" && (board[wincombo[1]]) == "X" && (board[wincombo[2]]) == "X"
-    return wincombo
-  elsif (board[wincombo[0]]) == "O" && (board[wincombo[1]]) == "O" && (board[wincombo[2]]) == "O"
-    return wincombo
+def won?(board)
+  WIN_COMBINATIONS.detect do |combo|
+    board[combo[0]] == board[combo[1]] &&
+    board[combo[1]] == board[combo[2]] &&
+    position_taken?(board, combo[0])
   end
-end
 end
