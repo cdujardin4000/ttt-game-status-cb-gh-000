@@ -35,7 +35,7 @@ WIN_COMBINATIONS = [
         return wincombo
       end
     else
-      false
+      return false
     end
   end
 end
