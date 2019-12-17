@@ -24,11 +24,11 @@ def won?(board)
 end
 
 def full?(board)
-  board.none?{|i| i == " "}
+  board.none?{|input| input == " "}
 end
 
 def draw?(board)
-  if full?(board) == true && won?(board) == false
+  if board.all?{|input| input.downcase == "x" || input.downcase == "o"} && won?(board) == false
     return true
 
   end
