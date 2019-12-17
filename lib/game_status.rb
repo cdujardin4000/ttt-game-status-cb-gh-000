@@ -35,6 +35,6 @@ WIN_COMBINATIONS = [
         return wincombo
       end
 
-  
+
   end
 end
