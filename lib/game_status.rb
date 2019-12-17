@@ -26,3 +26,16 @@ end
 def full?(board)
   board.none?{|i| i == " "}
 end
+
+def draw?(board)
+  if won?(board) == false && full?(board) == true
+    return true
+end
+
+def valid_move?(board, index)
+  if position_taken?(board, index) == false && index.between?(0, 8)
+    return true
+  else
+    return false
+  end
+end
