@@ -28,7 +28,7 @@ def full?(board)
 end
 
 def draw?(board)
-  if board.all?{|input| input.downcase == "x" || input.downcase == "o"} && won?(board) == false
+  if board.all?{|input| input == "X" || input == "O"} && won?(board) == false
     return true
 
   end
