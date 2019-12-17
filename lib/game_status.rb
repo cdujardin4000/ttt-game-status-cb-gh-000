@@ -28,7 +28,7 @@ WIN_COMBINATIONS = [
     position_1 = board[win_index_1] # load the value of the board at win_index_1
     position_2 = board[win_index_2] # load the value of the board at win_index_2
     position_3 = board[win_index_3] # load the value of the board at win_index_3
-    def game_status?(board) WIN_COMBINATIONS.each do |wincombo|
+    def game_won?(board) WIN_COMBINATIONS.each do |wincombo|
       if (board[wincombo[0]]) == "X" && (board[wincombo[1]]) == "X" && (board[wincombo[2]]) == "X"
         return wincombo
       elsif (board[wincombo[0]]) == "O" && (board[wincombo[1]]) == "O" && (board[wincombo[2]]) == "O"
