@@ -44,10 +44,17 @@ def over?(board)
   end
 end
 
-def winner?(board)
-  if won?(board) == falsey
+def winner (board)
+  index = []
+  index = won?(board)
+  if index == false
     return nil
   else
-    return combo
+    if board[index[0]] == "X"
+      return "X"
+    else
+      return "O"
+    end
   end
 end
+
